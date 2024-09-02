@@ -1,0 +1,233 @@
+/* ** Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+/*** Colors  */
+
+:root {
+  --primary1: hsl(172, 67%, 45%); /* Strong cyan*/
+  --neutral1: hsl(183, 100%, 15%); /* Very dark cyan*/
+  --neutral2: hsl(186, 14%, 43%); /* Dark grayish cyan*/
+  --neutral3: hsl(184, 14%, 56%); /* Grayish cyan */
+  --neutral4: hsl(185, 41%, 84%); /* Light grayish cyan */
+  --neutral5: hsl(189, 41%, 97%); /* Very light grayish cyan*/
+  --neutral6: hsl(0, 0%, 100%); /* White  */
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: var(--neutral4);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+/** Container */
+h2 {
+  color: var(--neutral1);
+}
+/** inner grid */
+.inner-calculator {
+  width: 60%;
+  background-color: var(--neutral6);
+  border-radius: 10px;
+  margin: auto;
+}
+.left,
+.right {
+  padding: 1rem;
+  width: 50%;
+}
+/**calculate Side */
+.left {
+  color: var(--neutral3);
+}
+.left .input-group {
+  background: var(--neutral5);
+  border-radius: 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  background-color: transparent;
+  outline: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background-color: transparent;
+  outline: none;
+  float: right;
+  color: var(--neutral1);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.input-group:hover,
+.col-lg-4 input[type="number"]:hover {
+  border: 2px solid var(--primary1);
+}
+input[type="number"]::placeholder {
+  font-size: 1.6em;
+  color: var(--neutral3);
+  padding: 1rem;
+}
+#basic-addon1,
+#basic-addon2 {
+  font-size: 1.6em;
+  color: var(--neutral3);
+}
+
+.col-lg-4 button {
+  border: none;
+  outline: none;
+  background: var(--neutral1);
+  color: var(--neutral6);
+  padding:0.5rem 0.77rem;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.col-lg-4 button:hover {
+  background: var(--neutral4);
+  color: var(--neutral1);
+}
+.col-lg-4 input[type="number"] {
+  font-size: 0.8em;
+  text-align: center;
+  background: var(--neutral5);
+  color: var(--neutral1);
+  padding: 0.77rem 0rem;
+}
+
+.invalid-feedback {
+  font-size: 1.1em;
+}
+/*** Results Side*/
+.right {
+  color: var(--neutral3);
+}
+.right .row {
+  background: var(--neutral1);
+  border-radius: 5px;
+  margin: auto;
+  height: 100%;
+}
+.reset-btn {
+  height: 45%;
+ 
+}
+
+.label h5 {
+  color: var(--neutral4);
+}
+.per,
+.result {
+  color: var(--primary1);
+}
+.per {
+  font-size: 0.8em;
+}
+.result {
+  font-size: 1.5em;
+}
+.reset {
+  outline: none;
+  border: none;
+  padding: 0.5rem 6rem;
+  background: var(--neutral2);
+  color: var(--neutral1);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.invalid-feedback {
+  font-size: 0.88em;
+}
+/*** Rows and Columns */
+.row {
+  margin: auto;
+}
+.col-12 {
+  padding: 1rem;
+  
+}
+
+.error {
+  border: 2px solid #ff0000;
+}
+.clicked {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+/*?? Media Queries */
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  .inner-calculator {
+    width: 80%;
+  }
+  .left,
+  .right {
+    width: auto;
+  }
+  .left h5 {
+    font-size: 1.2em;
+  }
+  input[type="number"]::placeholder,
+  #basic-addon1,
+  #basic-addon2 {
+    font-size: 1.2em;
+  }
+  .reset {
+    padding: 0.5rem 4rem;
+  }
+  .col-lg-4 {
+    padding: 0.5rem;
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner-calculator {
+    width: 95%;
+  }
+  .left h5 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  input[type="number"] {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.5em;
+  }
+  .invalid-feedback {
+    font-size: 1.3em;
+  }
+  .col-lg-4 button {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-height: 1366px) {
+  body {
+    min-height: 70vh;
+  }
+}
